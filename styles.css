@@ -81,9 +81,78 @@ a {
   width: fit-content;
 }
 
-.reader-shell {
-  width: min(980px, calc(100% - 32px));
+.blog-layout {
+  width: min(1240px, calc(100% - 32px));
   margin: 24px auto 52px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.sidebar-nav {
+  position: sticky;
+  top: 100px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 16px;
+}
+
+.sidebar-nav__header {
+  padding: 4px 4px 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+
+.sidebar-nav h2 {
+  margin: 4px 0 0;
+  font-size: 18px;
+}
+
+.sidebar-nav nav {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-item {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.nav-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.nav-item strong {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.nav-item:hover,
+.nav-item.is-active {
+  border-color: #c9d6f2;
+  background: #f6f9ff;
+}
+
+.nav-item.is-active strong {
+  color: var(--ink);
+}
+
+.reader-shell {
+  width: 100%;
+  margin: 0;
 }
 
 .article-layout {
@@ -406,35 +475,19 @@ blockquote {
   font-weight: 700;
 }
 
-.summary-link-list {
-  display: grid;
-  gap: 10px;
-}
-
-.summary-link {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  text-decoration: none;
-  background: var(--soft);
-}
-
-.summary-link span {
-  color: var(--green);
-  font-weight: 800;
-  font-size: 13px;
-}
-
-.summary-link strong {
-  color: var(--ink);
-  line-height: 1.4;
-}
-
 @media (max-width: 860px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-nav {
+    position: static;
+  }
+
+  .sidebar-nav nav {
+    grid-template-columns: 1fr;
+  }
+
   .reader-shell {
     width: min(100% - 24px, 920px);
   }
@@ -444,8 +497,7 @@ blockquote {
   .cards,
   .quick-read,
   .section-card__head,
-  .section-card__body,
-  .summary-link {
+  .section-card__body {
     grid-template-columns: 1fr;
   }
 

@@ -212,18 +212,96 @@ window.AI_VIDEO_REPORT = {
 
 window.AI_VIDEO_SUMMARIES = [
   {
+    id: "claude-cowork-system",
     title: "My Simple Claude Cowork System (for normal people)",
     date: "2026-04-28",
-    path: "./videos/2026-04-28-claude-cowork-system.html"
+    path: "./videos/2026-04-28-claude-cowork-system.html",
+    url: "https://www.youtube.com/watch?v=0_dSWLOHKng",
+    oneLine: "把 Claude 从一次性聊天框组织成一个能长期协作的 AI 工作空间。",
+    summary: "核心做法是把规则、记忆、资源和任务场景放进文件结构里，让 Claude 先进入有背景、有偏好、有任务边界的工作环境。",
+    actions: [
+      "把这期归类为 AI Workspace / 长期上下文 / Agent 工作区案例。",
+      "关注 Claude、ChatGPT、Cursor、Codex 如何处理规则文件、记忆和项目空间。",
+      "不必完整看视频，除非你想搭一套自己的 Claude Cowork 工作区。"
+    ],
+    chapters: [
+      {
+        time: "00:00 - 03:39",
+        title: "Claude Cowork 是什么",
+        context: "Claude 可以写邮件、整理资料，但如果只靠聊天框，很难持续知道你的背景、风格和任务状态。",
+        authorView: "作者想强调，问题不在于 Claude 不够聪明，而在于我们通常把它当成一次性聊天工具使用。他希望观众把 Claude Cowork 理解成一个稳定工作环境，让 Claude 更像长期协作的同事。",
+        sourceCue: "from a chatbot into a full operating system"
+      },
+      {
+        time: "03:39 - 11:01",
+        title: "三层结构：Root、Workstations、Projects",
+        context: "根目录放全局规则和记忆，工作站负责某一类任务，项目保存更具体的上下文。",
+        authorView: "作者把工作空间分层，是为了让长期偏好和具体任务分开。Root 保存长期规则，Workstation 对应一类工作，Project 承载具体任务。",
+        sourceCue: "three-level hierarchy"
+      }
+    ],
+    tools: ["Claude Cowork", "CLAUDE.md", "memory.md", "Obsidian"]
   },
   {
+    id: "claude-cowork-80-percent",
     title: "Learn 80% of Claude Cowork in Under 20 Minutes",
     date: "2026-04-07",
-    path: "./videos/2026-04-07-claude-cowork-80-percent.html"
+    path: "./videos/2026-04-07-claude-cowork-80-percent.html",
+    url: "https://www.youtube.com/watch?v=z9rdrNrkvDY",
+    oneLine: "这期是 Claude Cowork 的能力地图，先掌握 7 个核心能力，再开始自动化真实工作。",
+    summary: "视频按能力讲解 Cowork：本地文件访问、持久记忆、工具和连接器、Skills、Projects、浏览器扩展和定时任务。",
+    actions: [
+      "先理解 7 个能力，不要一上来就照抄模板。",
+      "重点关注本地文件访问、持久记忆、Skills、定时任务。",
+      "把它当成 Claude Cowork 功能地图，而不是深度技术教程。"
+    ],
+    chapters: [
+      {
+        time: "00:00 - 02:19",
+        title: "Claude Chat、Cowork、Code 的区别",
+        context: "开头先做产品定位，帮助观众区分 Claude 的不同使用入口。",
+        authorView: "作者先划清边界，再讲能力，避免观众把 Cowork 当作更复杂的聊天窗口。他希望你把 Cowork 看成电脑上的生产力系统。",
+        sourceCue: "Claude Chat, Cowork, Code"
+      },
+      {
+        time: "02:19 - 08:44",
+        title: "本地文件访问和持久记忆",
+        context: "Cowork 能接触本地工作材料，并保存持续有效的记忆。",
+        authorView: "作者认为这两项决定 Cowork 能不能处理真实工作。本地文件访问减少复制粘贴，持久记忆减少重复解释。",
+        sourceCue: "local file access, persistent memory"
+      }
+    ],
+    tools: ["Claude Cowork", "Claude Skills", "Cowork Projects", "Scheduled Tasks"]
   },
   {
+    id: "notebooklm-2026",
     title: "NotebookLM Changed Completely: Here's What Matters (in 2026)",
     date: "2026-03-17",
-    path: "./videos/2026-03-17-notebooklm-2026.html"
+    path: "./videos/2026-03-17-notebooklm-2026.html",
+    url: "https://www.youtube.com/watch?v=_uXnyhrqmsU",
+    oneLine: "NotebookLM 正在从基于资料问答，变成基于资料生成工作成果的内容工作台。",
+    summary: "作者把 NotebookLM 拆成 Sources、Chat、Studio 三栏，并重点评估 Studio 里的报告、幻灯片、信息图和思维导图。",
+    actions: [
+      "重点试 Reports、Slide Decks、Infographics、Mind Maps。",
+      "把 NotebookLM 当作 source-grounded content studio。",
+      "Video / Audio / Quiz / Flashcards 按场景使用即可。"
+    ],
+    chapters: [
+      {
+        time: "00:00 - 02:05",
+        title: "NotebookLM 的核心优势",
+        context: "它的优势不是泛泛回答，而是围绕你提供的 sources 工作。",
+        authorView: "作者希望观众先理解这个前提：NotebookLM 的输出质量取决于资料源质量，后面的报告、PPT、信息图和思维导图都建立在 source-grounded 的基础上。",
+        sourceCue: "Core Advantage"
+      },
+      {
+        time: "07:51 - 13:56",
+        title: "Tier 1 Studio 工具",
+        context: "Reports、Slide Decks、Infographics、Mind Maps 是最值得优先使用的工具。",
+        authorView: "作者认为这些工具价值最高，因为它们能把资料直接变成可交付内容。重点不是功能多，而是优先掌握高频、高价值工具。",
+        sourceCue: "Tier 1 Tools"
+      }
+    ],
+    tools: ["NotebookLM", "Reports", "Slide Decks", "Infographics", "Mind Maps"]
   }
 ];
