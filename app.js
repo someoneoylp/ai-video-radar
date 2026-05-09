@@ -131,8 +131,9 @@
         <div class="tool-row">${productCards(report.intelligence.products)}</div>
       </section>
 
-      <section class="panel summary-links">
-        <h2 class="section-title">最近 3 个摘要文档</h2>
+      <section class="panel summary-links video-directory">
+        <p class="eyebrow">目录</p>
+        <h2 class="section-title">所有生成的视频说明页面</h2>
         <div class="summary-link-list">${summaryLinks(window.AI_VIDEO_SUMMARIES || [])}</div>
       </section>
     </main>

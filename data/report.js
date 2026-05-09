@@ -214,16 +214,16 @@ window.AI_VIDEO_SUMMARIES = [
   {
     title: "My Simple Claude Cowork System (for normal people)",
     date: "2026-04-28",
-    path: "./summaries/2026-04-28-claude-cowork-system.md"
+    path: "./videos/2026-04-28-claude-cowork-system.html"
   },
   {
     title: "Learn 80% of Claude Cowork in Under 20 Minutes",
     date: "2026-04-07",
-    path: "./summaries/2026-04-07-claude-cowork-80-percent.md"
+    path: "./videos/2026-04-07-claude-cowork-80-percent.html"
   },
   {
     title: "NotebookLM Changed Completely: Here's What Matters (in 2026)",
     date: "2026-03-17",
-    path: "./summaries/2026-03-17-notebooklm-2026.md"
+    path: "./videos/2026-03-17-notebooklm-2026.html"
   }
 ];

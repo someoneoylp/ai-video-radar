@@ -38,6 +38,9 @@ assert(!app.includes("高赞评论会补充什么"), "page should not render a s
 assert(app.includes("section-title"), "section headings should use a calmer title style");
 assert(app.includes("brief-copy"), "body copy should use a consistent brief typography class");
 assert(app.includes("summary-links"), "home page should link to generated summary documents");
+assert(app.includes("video-directory"), "home page should render a directory of generated video pages");
+assert(report.includes(".html"), "directory links should point to readable HTML summary pages");
+assert(fs.existsSync(path.join(root, "videos", "2026-04-28-claude-cowork-system.html")), "first video HTML page should exist");
 assert(!app.includes("技术重点怎么理解"), "app.js should not render the redundant technical explanation section");
 assert(!app.includes("主播到底在解决什么问题"), "app.js should not render the redundant context section");
 assert(report.includes("My Simple Claude Cowork System"), "report data should include the latest tested Jeff Su video");
