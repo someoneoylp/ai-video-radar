@@ -26,13 +26,12 @@
         <div class="hero__content">
           <div class="meta">
             <span>${escapeHtml(video.date)}</span>
-            <span>Jeff Su</span>
+            <span>${escapeHtml(video.author)}</span>
           </div>
           <h2>${escapeHtml(video.title)}</h2>
           <p class="brief-copy">${escapeHtml(video.summary)}</p>
           <div class="hero-actions">
             <a class="primary-link" href="${escapeHtml(video.url)}" target="_blank" rel="noreferrer">打开原视频</a>
-            <a class="source-link" href="${escapeHtml(video.path)}" target="_blank" rel="noreferrer">独立页面</a>
           </div>
         </div>
       </section>
@@ -94,7 +93,7 @@
         <nav>
           ${videos.map((video) => `
             <button class="nav-item ${video.id === activeId ? "is-active" : ""}" data-video-id="${escapeHtml(video.id)}">
-              <span>${escapeHtml(video.date)}</span>
+              <span>${escapeHtml(video.author)} · ${escapeHtml(video.date)}</span>
               <strong>${escapeHtml(video.title)}</strong>
             </button>
           `).join("")}
@@ -105,13 +104,14 @@
 
   function render(activeId) {
     const current = videos.find((video) => video.id === activeId) || videos[0];
+    const authorCount = new Set(videos.map((video) => video.author)).size;
     app.innerHTML = `
       <header class="topbar">
         <div>
           <p class="eyebrow">AI Video Radar</p>
-          <h1>Jeff Su AI 技术情报</h1>
+          <h1>AI 视频解读目录</h1>
         </div>
-        <a class="source-link" href="${escapeHtml(report.video.channelUrl)}" target="_blank" rel="noreferrer">频道</a>
+        <span class="source-link">${authorCount} 位作者 · ${videos.length} 个视频</span>
       </header>
 
       <main class="blog-layout">

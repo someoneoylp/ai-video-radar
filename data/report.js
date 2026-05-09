@@ -212,96 +212,147 @@ window.AI_VIDEO_REPORT = {
 
 window.AI_VIDEO_SUMMARIES = [
   {
-    id: "claude-cowork-system",
+    id: "jeff-claude-cowork-system",
+    author: "Jeff Su",
     title: "My Simple Claude Cowork System (for normal people)",
     date: "2026-04-28",
     path: "./videos/2026-04-28-claude-cowork-system.html",
     url: "https://www.youtube.com/watch?v=0_dSWLOHKng",
     oneLine: "把 Claude 从一次性聊天框组织成一个能长期协作的 AI 工作空间。",
     summary: "核心做法是把规则、记忆、资源和任务场景放进文件结构里，让 Claude 先进入有背景、有偏好、有任务边界的工作环境。",
-    actions: [
-      "把这期归类为 AI Workspace / 长期上下文 / Agent 工作区案例。",
-      "关注 Claude、ChatGPT、Cursor、Codex 如何处理规则文件、记忆和项目空间。",
-      "不必完整看视频，除非你想搭一套自己的 Claude Cowork 工作区。"
-    ],
+    actions: ["归类为 AI Workspace / 长期上下文案例。", "关注规则文件、记忆和项目空间。", "不必完整看，除非你想搭自己的 Cowork。"],
     chapters: [
-      {
-        time: "00:00 - 03:39",
-        title: "Claude Cowork 是什么",
-        context: "Claude 可以写邮件、整理资料，但如果只靠聊天框，很难持续知道你的背景、风格和任务状态。",
-        authorView: "作者想强调，问题不在于 Claude 不够聪明，而在于我们通常把它当成一次性聊天工具使用。他希望观众把 Claude Cowork 理解成一个稳定工作环境，让 Claude 更像长期协作的同事。",
-        sourceCue: "from a chatbot into a full operating system"
-      },
-      {
-        time: "03:39 - 11:01",
-        title: "三层结构：Root、Workstations、Projects",
-        context: "根目录放全局规则和记忆，工作站负责某一类任务，项目保存更具体的上下文。",
-        authorView: "作者把工作空间分层，是为了让长期偏好和具体任务分开。Root 保存长期规则，Workstation 对应一类工作，Project 承载具体任务。",
-        sourceCue: "three-level hierarchy"
-      }
+      { time: "00:00 - 03:39", title: "Claude Cowork 是什么", context: "Claude 能处理任务，但聊天框缺少稳定背景。", authorView: "作者想强调，真正的变化不是 Claude 更聪明，而是你给它一个稳定工作环境，让它像长期协作同事。", sourceCue: "from a chatbot into a full operating system" },
+      { time: "03:39 - 11:01", title: "三层结构", context: "Root、Workstations、Projects 分别保存全局规则、任务场景和具体上下文。", authorView: "作者把工作空间分层，是为了让长期偏好和具体任务分开，避免所有资料混在一起。", sourceCue: "three-level hierarchy" }
     ],
     tools: ["Claude Cowork", "CLAUDE.md", "memory.md", "Obsidian"]
   },
   {
-    id: "claude-cowork-80-percent",
+    id: "jeff-claude-cowork-80-percent",
+    author: "Jeff Su",
     title: "Learn 80% of Claude Cowork in Under 20 Minutes",
     date: "2026-04-07",
     path: "./videos/2026-04-07-claude-cowork-80-percent.html",
     url: "https://www.youtube.com/watch?v=z9rdrNrkvDY",
     oneLine: "这期是 Claude Cowork 的能力地图，先掌握 7 个核心能力，再开始自动化真实工作。",
-    summary: "视频按能力讲解 Cowork：本地文件访问、持久记忆、工具和连接器、Skills、Projects、浏览器扩展和定时任务。",
-    actions: [
-      "先理解 7 个能力，不要一上来就照抄模板。",
-      "重点关注本地文件访问、持久记忆、Skills、定时任务。",
-      "把它当成 Claude Cowork 功能地图，而不是深度技术教程。"
-    ],
+    summary: "Jeff 把 Cowork 拆成几个可理解的能力：本地文件访问、持久记忆、连接器、Skills、Projects、浏览器扩展和定时任务。",
+    actions: ["先理解能力边界，再决定是否迁移工作流。", "重点关注本地文件访问、持久记忆、Skills、定时任务。", "把它当成 Claude Cowork 功能地图，而不是深度技术课。"],
     chapters: [
-      {
-        time: "00:00 - 02:19",
-        title: "Claude Chat、Cowork、Code 的区别",
-        context: "开头先做产品定位，帮助观众区分 Claude 的不同使用入口。",
-        authorView: "作者先划清边界，再讲能力，避免观众把 Cowork 当作更复杂的聊天窗口。他希望你把 Cowork 看成电脑上的生产力系统。",
-        sourceCue: "Claude Chat, Cowork, Code"
-      },
-      {
-        time: "02:19 - 08:44",
-        title: "本地文件访问和持久记忆",
-        context: "Cowork 能接触本地工作材料，并保存持续有效的记忆。",
-        authorView: "作者认为这两项决定 Cowork 能不能处理真实工作。本地文件访问减少复制粘贴，持久记忆减少重复解释。",
-        sourceCue: "local file access, persistent memory"
-      }
+      { time: "00:00 - 02:19", title: "Claude Chat、Cowork、Code 的区别", context: "开头先做产品定位，帮助观众区分 Claude 的不同使用入口。", authorView: "Jeff 想先划清边界，避免观众把 Cowork 当作更复杂的聊天窗口。他希望你把 Cowork 看成电脑上的生产力系统。", sourceCue: "Claude Chat, Cowork, Code" },
+      { time: "02:19 - 08:44", title: "本地文件访问和持久记忆", context: "Cowork 能接触本地工作材料，并保存持续有效的记忆。", authorView: "Jeff 认为这两项决定 Cowork 能不能处理真实工作。本地文件访问减少复制粘贴，持久记忆减少重复解释。", sourceCue: "local file access, persistent memory" }
     ],
     tools: ["Claude Cowork", "Claude Skills", "Cowork Projects", "Scheduled Tasks"]
   },
   {
-    id: "notebooklm-2026",
+    id: "jeff-notebooklm-2026",
+    author: "Jeff Su",
     title: "NotebookLM Changed Completely: Here's What Matters (in 2026)",
     date: "2026-03-17",
     path: "./videos/2026-03-17-notebooklm-2026.html",
     url: "https://www.youtube.com/watch?v=_uXnyhrqmsU",
-    oneLine: "NotebookLM 正在从基于资料问答，变成基于资料生成工作成果的内容工作台。",
-    summary: "作者把 NotebookLM 拆成 Sources、Chat、Studio 三栏，并重点评估 Studio 里的报告、幻灯片、信息图和思维导图。",
-    actions: [
-      "重点试 Reports、Slide Decks、Infographics、Mind Maps。",
-      "把 NotebookLM 当作 source-grounded content studio。",
-      "Video / Audio / Quiz / Flashcards 按场景使用即可。"
-    ],
+    oneLine: "NotebookLM 正在从资料问答工具，变成基于资料生成工作成果的内容工作台。",
+    summary: "Jeff 把 NotebookLM 拆成 Sources、Chat、Studio 三栏，重点评估 Studio 里的报告、幻灯片、信息图和思维导图。",
+    actions: ["优先试 Reports、Slide Decks、Infographics、Mind Maps。", "把 NotebookLM 理解为 source-grounded content studio。", "视频、音频、Quiz、Flashcards 按具体场景使用即可。"],
     chapters: [
-      {
-        time: "00:00 - 02:05",
-        title: "NotebookLM 的核心优势",
-        context: "它的优势不是泛泛回答，而是围绕你提供的 sources 工作。",
-        authorView: "作者希望观众先理解这个前提：NotebookLM 的输出质量取决于资料源质量，后面的报告、PPT、信息图和思维导图都建立在 source-grounded 的基础上。",
-        sourceCue: "Core Advantage"
-      },
-      {
-        time: "07:51 - 13:56",
-        title: "Tier 1 Studio 工具",
-        context: "Reports、Slide Decks、Infographics、Mind Maps 是最值得优先使用的工具。",
-        authorView: "作者认为这些工具价值最高，因为它们能把资料直接变成可交付内容。重点不是功能多，而是优先掌握高频、高价值工具。",
-        sourceCue: "Tier 1 Tools"
-      }
+      { time: "00:00 - 02:05", title: "NotebookLM 的核心优势", context: "它的优势不是泛泛回答，而是围绕你提供的 sources 工作。", authorView: "Jeff 希望观众先理解这个前提：NotebookLM 的输出质量取决于资料源质量，后面的报告、PPT、信息图和思维导图都建立在 source-grounded 的基础上。", sourceCue: "Core Advantage" },
+      { time: "07:51 - 13:56", title: "Tier 1 Studio 工具", context: "Reports、Slide Decks、Infographics、Mind Maps 是最值得优先使用的工具。", authorView: "Jeff 认为这些工具价值最高，因为它们能把资料直接变成可交付内容。重点不是功能多，而是优先掌握高频、高价值工具。", sourceCue: "Tier 1 Tools" }
     ],
     tools: ["NotebookLM", "Reports", "Slide Decks", "Infographics", "Mind Maps"]
+  },
+  {
+    id: "tina-openclaw-setup",
+    author: "Tina Huang",
+    title: "My FULL OpenClaw Setup (steal my prompts!)",
+    date: "2026-04-28",
+    path: "",
+    url: "https://www.youtube.com/watch?v=oOCN30ulVyo",
+    oneLine: "这期是 Tina 的 OpenClaw 实战配置清单，重点是把本地 agent 环境从安装推进到多 agent 工作流。",
+    summary: "她按自己的实际设置讲硬件选择、安装向导、Mission Control、Discord、项目构建、GitHub、多 Agent、安全检查和记忆修复。",
+    actions: ["先看 OpenClaw 是否适合本地 agent 实验。", "重点关注 Mission Control、多 Agent、GitHub 和安全检查。", "提示词可借鉴，但不要照搬到敏感项目。"],
+    chapters: [
+      { time: "00:50 - 08:13", title: "硬件、下载和 Onboarding", context: "她先从环境准备讲起，降低 OpenClaw 上手门槛。", authorView: "Tina 想表达的是，本地 agent 不是只靠软件安装，硬件、初始配置和引导流程会直接影响后续体验。她把 setup 细节讲出来，是为了让观众少踩环境坑。", sourceCue: "Hardware Selection / Download & Onboarding Wizard" },
+      { time: "16:58 - 22:32", title: "Multi-Agent、安全和记忆修复", context: "后段进入更高级的 agent 协作、权限和记忆问题。", authorView: "她真正关心的是 agent 系统是否能可靠完成项目，而不是只跑 demo。多 agent 要有协作方式，安全检查要防止越权，记忆修复则影响持续工作质量。", sourceCue: "Multi-Agent Framework / Security Check / Memory Fixes" }
+    ],
+    tools: ["OpenClaw", "Bolt", "GitHub", "Discord"]
+  },
+  {
+    id: "tina-local-ai-agents",
+    author: "Tina Huang",
+    title: "Local AI Agents In 26 Minutes",
+    date: "2026-04-15",
+    path: "",
+    url: "https://www.youtube.com/watch?v=M-NTwkM3VwM",
+    oneLine: "这期是本地 AI Agent 入门，重点解释什么是 local agent，以及如何用 OpenClaw 和 Claude Cowork 实操。",
+    summary: "视频先定义 Local AI Agent，再讲原则与技巧，随后用 OpenClaw 代码 demo 和 Claude Cowork no-code demo 展示两条路径。",
+    actions: ["先理解 local agent 的边界。", "代码路径看 OpenClaw，低代码路径看 Claude Cowork。", "关注本地权限、文件访问和安全边界。"],
+    chapters: [
+      { time: "01:18 - 09:29", title: "Local AI Agent 定义和原则", context: "她先回答 local agent 是什么，以及使用时要注意哪些原则。", authorView: "Tina 想让观众先建立正确预期：local agent 不是神奇自动化按钮，而是在本机环境里使用工具、文件和上下文完成任务的系统。", sourceCue: "Definition Of Local AI Agent / Principles And Tips" },
+      { time: "14:20 - 24:22", title: "OpenClaw 与 Claude Cowork demo", context: "她分别展示代码方式和 no-code 方式。", authorView: "她用两个 demo 对比不同人群的入口：愿意写代码的人可以用 OpenClaw 掌控更多细节；想快速开始的人可以用 Claude Cowork。", sourceCue: "Demo: Openclaw / Demo: Claude Cowork" }
+    ],
+    tools: ["OpenClaw", "Claude Cowork", "Local AI Agents"]
+  },
+  {
+    id: "tina-open-source-models",
+    author: "Tina Huang",
+    title: "Every Way To Run Open Source AI Models",
+    date: "2026-03-24",
+    path: "",
+    url: "https://www.youtube.com/watch?v=vehYE1DfkZg",
+    oneLine: "这期是运行开源 AI 模型的部署路径地图，从本地到托管 API、VPS、云和端侧。",
+    summary: "Tina 按部署方式拆解：本地运行、浏览器/托管 playground、托管推理 API、VPS、托管云、端侧/边缘。",
+    actions: ["学习阶段优先本地或 playground。", "产品验证可用托管推理 API。", "需要控制成本和性能时再评估 VPS、云和边缘。"],
+    chapters: [
+      { time: "01:40 - 10:44", title: "本地、Playground 和推理 API", context: "前半段讲最容易上手的三类方式。", authorView: "Tina 想让观众看到，运行开源模型不是只有自己配 GPU 一条路。不同方式对应不同门槛、成本和控制权。", sourceCue: "Run Open Source Models Locally / Managed Inference API" },
+      { time: "11:57 - 16:01", title: "VPS、托管云和端侧", context: "后半段讲更偏部署和产品化的选择。", authorView: "她想强调，选择部署方式要看目标：实验、产品原型、稳定服务、隐私或延迟，每种目标对应不同基础设施。", sourceCue: "VPS / Managed Cloud / On-device/Edge" }
+    ],
+    tools: ["Open Source Models", "Managed Inference API", "VPS", "Edge"]
+  },
+  {
+    id: "karpathy-how-i-use-llms",
+    author: "Andrej Karpathy",
+    title: "How I use LLMs",
+    date: "2025-02-27",
+    path: "",
+    url: "https://www.youtube.com/watch?v=EWvNQjAaOHw",
+    oneLine: "这期是 Karpathy 的 LLM 实用生态 walkthrough，展示他如何在生活和工作里使用各类 LLM 功能。",
+    summary: "内容覆盖基础聊天、thinking models、搜索、deep research、文件上传、Python、Artifacts、Cursor、语音、NotebookLM、图像和视频、多模态、记忆与 Custom GPTs。",
+    actions: ["把它当成 LLM 使用地图。", "重点看工具使用、文件上下文、代码、语音和多模态章节。", "用它校准自己对 LLM 产品生态的理解。"],
+    chapters: [
+      { time: "00:00 - 00:31:00", title: "LLM 交互和模型选择", context: "开头解释 ChatGPT 交互、基础例子、模型和价格层级、thinking models。", authorView: "Karpathy 想让普通用户理解，LLM 不是一个单一产品，而是一组能力和成本不同的模型。会选模型，比盲目使用更重要。", sourceCue: "Be aware of the model you're using" },
+      { time: "00:31:00 - 01:14:02", title: "工具使用和上下文", context: "中段讲搜索、deep research、文件上传、Python、Claude Artifacts。", authorView: "他真正想展示的是 LLM 如何从聊天扩展成工作台：搜索补外部信息，文件提供上下文，Python 负责计算，Artifacts 负责生成可视化结果。", sourceCue: "Tool use / File uploads / Claude Artifacts" }
+    ],
+    tools: ["ChatGPT", "Claude", "Gemini", "NotebookLM", "Cursor"]
+  },
+  {
+    id: "karpathy-deep-dive-llms",
+    author: "Andrej Karpathy",
+    title: "Deep Dive into LLMs like ChatGPT",
+    date: "2025-02-05",
+    path: "",
+    url: "https://www.youtube.com/watch?v=7xTGNNLPyMI",
+    oneLine: "这期是面向大众的 LLM 全栈深潜，从预训练、tokenization、推理到后训练、RLHF 和未来趋势。",
+    summary: "Karpathy 系统解释 LLM 如何从互联网数据预训练、如何 tokenization、如何推理、如何 post-training，以及 hallucination、tool use、RL、DeepSeek-R1 等概念。",
+    actions: ["作为 LLM 技术底层入门主课。", "重点理解 pretraining 到 post-training 的过渡。", "把 hallucination、tool use、working memory 当作产品能力边界看。"],
+    chapters: [
+      { time: "00:01:00 - 00:59:23", title: "预训练、tokenization 和推理", context: "前半段讲模型如何从互联网数据学习，以及 token 和 neural network 的基本运作。", authorView: "Karpathy 想把 LLM 去神秘化：它不是魔法，而是大规模数据、token 表示、神经网络和推理过程的组合。理解这些，才能理解模型为什么强也为什么会犯错。", sourceCue: "pretraining data / tokenization / inference" },
+      { time: "00:59:23 - 03:21:46", title: "后训练、工具和未来", context: "后半段讲 post-training、hallucinations、tool use、RLHF、DeepSeek-R1 和未来方向。", authorView: "他希望观众看到，现代 LLM 的能力不只来自预训练，还来自后训练、强化学习、工具使用和产品包装。未来竞争会围绕这些层一起展开。", sourceCue: "post-training / RLHF / DeepSeek-R1" }
+    ],
+    tools: ["LLM", "GPT-2", "Llama", "DeepSeek-R1", "RLHF"]
+  },
+  {
+    id: "karpathy-reproduce-gpt2",
+    author: "Andrej Karpathy",
+    title: "Let's reproduce GPT-2 (124M)",
+    date: "2024-06-09",
+    path: "",
+    url: "https://www.youtube.com/watch?v=l8pRSuU81PU",
+    oneLine: "这期是从零复现 GPT-2 124M 的工程课，覆盖模型实现、训练加速、超参数和完整训练运行。",
+    summary: "视频从 OpenAI GPT-2 checkpoint 开始，逐步实现 GPT-2 nn.Module、forward pass、采样、训练 loop、data loader、参数共享、初始化和 GPU 加速。",
+    actions: ["适合想真正理解 Transformer 训练工程的人。", "配合 build-nanogpt 和 nanoGPT repo 学习。", "重点看实现到训练加速的完整路径。"],
+    chapters: [
+      { time: "00:03:39 - 01:22:18", title: "实现 GPT-2 模型和训练基础", context: "前半段从 checkpoint、nn.Module、forward、sampling 到基本训练 loop。", authorView: "Karpathy 想让观众亲手穿过模型实现细节，而不是只看论文图。通过复现 GPT-2，你能把 token、logits、loss、sampling 和训练循环连成一个整体。", sourceCue: "implementing the GPT-2 nn.Module" },
+      { time: "01:22:18 - 结束", title: "训练加速和完整运行", context: "后半段进入 GPU、mixed precision、Tensor Cores、训练超参数和完整 run。", authorView: "他想强调，模型能跑起来只是第一步；真正的训练工程还包括速度、数值稳定性、硬件利用和可复现的超参数设置。", sourceCue: "Let's make it fast / Tensor Cores" }
+    ],
+    tools: ["GPT-2", "nanoGPT", "llm.c", "PyTorch", "Tensor Cores"]
   }
 ];

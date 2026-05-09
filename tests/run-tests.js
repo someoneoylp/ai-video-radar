@@ -39,6 +39,11 @@ assert(fs.existsSync(path.join(root, "videos", "2026-04-28-claude-cowork-system.
 assert(app.includes("blog-layout"), "home page should use a blog layout");
 assert(app.includes("sidebar-nav"), "home page should render a left sidebar navigation");
 assert(app.includes("renderVideoPage"), "home page should switch video content in-place");
+assert(app.includes("video.author"), "directory and content should display author information");
+assert(app.includes("authorCount"), "header should derive the author count from report data");
+assert(report.includes("Tina Huang"), "report data should include Tina Huang videos");
+assert(report.includes("Andrej Karpathy"), "report data should include Andrej Karpathy videos");
+assert((report.match(/author:/g) || []).length >= 9, "report data should include at least nine video summaries");
 assert(!app.includes("技术重点怎么理解"), "app.js should not render the redundant technical explanation section");
 assert(!app.includes("主播到底在解决什么问题"), "app.js should not render the redundant context section");
 assert(report.includes("My Simple Claude Cowork System"), "report data should include the latest tested Jeff Su video");
