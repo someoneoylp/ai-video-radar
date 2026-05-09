@@ -20,6 +20,8 @@ assert(mindmap.includes("Claude Cowork：把聊天框变成 AI 工作空间"), "
 assert(mindmap.includes("memory.md 保存长期事实"), "mind map should include a concrete child node");
 assert(app.includes("快速理解"), "app.js should render a quick understanding section");
 assert(app.includes("作者观点"), "app.js should render author viewpoints per section");
+assert(app.includes("作者讲了什么"), "app.js should render concrete author content per section");
+assert(app.includes("chapter-detail"), "app.js should render the detailed chapter explanation");
 assert(!app.includes("<h4>技术含义</h4>"), "section cards should not render a technical meaning column");
 assert(!app.includes("section-card__comments"), "section cards should not render comments row");
 assert(app.includes("reader-shell"), "page should use a reader shell layout");
@@ -44,6 +46,7 @@ assert(app.includes("authorCount"), "header should derive the author count from 
 assert(report.includes("Tina Huang"), "report data should include Tina Huang videos");
 assert(report.includes("Andrej Karpathy"), "report data should include Andrej Karpathy videos");
 assert((report.match(/author:/g) || []).length >= 9, "report data should include at least nine video summaries");
+assert((report.match(/details:/g) || []).length >= 25, "report data should include concrete details for expanded chapters");
 assert(!app.includes("技术重点怎么理解"), "app.js should not render the redundant technical explanation section");
 assert(!app.includes("主播到底在解决什么问题"), "app.js should not render the redundant context section");
 assert(report.includes("My Simple Claude Cowork System"), "report data should include the latest tested Jeff Su video");

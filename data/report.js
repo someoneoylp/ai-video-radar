@@ -222,8 +222,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "核心做法是把规则、记忆、资源和任务场景放进文件结构里，让 Claude 先进入有背景、有偏好、有任务边界的工作环境。",
     actions: ["归类为 AI Workspace / 长期上下文案例。", "关注规则文件、记忆和项目空间。", "不必完整看，除非你想搭自己的 Cowork。"],
     chapters: [
-      { time: "00:00 - 03:39", title: "Claude Cowork 是什么", context: "Claude 能处理任务，但聊天框缺少稳定背景。", authorView: "作者想强调，真正的变化不是 Claude 更聪明，而是你给它一个稳定工作环境，让它像长期协作同事。", sourceCue: "from a chatbot into a full operating system" },
-      { time: "03:39 - 11:01", title: "三层结构", context: "Root、Workstations、Projects 分别保存全局规则、任务场景和具体上下文。", authorView: "作者把工作空间分层，是为了让长期偏好和具体任务分开，避免所有资料混在一起。", sourceCue: "three-level hierarchy" }
+      { time: "00:00 - 03:39", title: "Claude Cowork 是什么", context: "Claude 能处理任务，但聊天框缺少稳定背景。", details: "Jeff 先用普通办公场景解释问题：Claude 已经能写邮件、整理资料、生成草稿，但如果每次都从聊天框开始，你还是要反复告诉它你的背景、风格、项目状态和输出要求。他把 Claude Cowork 介绍成一个工作空间，不是单纯的提示词集合。这个工作空间会保存规则、记忆和资料，让 Claude 接任务时先理解你是谁、你在做什么、你希望它怎么做。", authorView: "作者想强调，真正的变化不是 Claude 更聪明，而是你给它一个稳定工作环境，让它像长期协作同事。", sourceCue: "from a chatbot into a full operating system" },
+      { time: "03:39 - 11:01", title: "三层结构", context: "Root、Workstations、Projects 分别保存全局规则、任务场景和具体上下文。", details: "他把整个系统拆成三层：Root 放全局规则、长期记忆和通用资料；Workstations 对应一类工作，比如邮件、财务、写作；Projects 则保存某个具体项目的上下文。这样做的重点不是文件夹好看，而是让 Claude 不同任务读取不同资料。比如写邮件时读语气和联系人背景，做 newsletter 时读过往样例和写作原则。", authorView: "作者把工作空间分层，是为了让长期偏好和具体任务分开，避免所有资料混在一起。", sourceCue: "three-level hierarchy" },
+      { time: "11:01 - 18:44", title: "文件、记忆和真实用例", context: "CLAUDE.md、memory.md 和 resources 把隐性知识变成可复用资料。", details: "Jeff 继续展示关键文件怎么用：CLAUDE.md 像工作区说明书，告诉 Claude 任务规则和输出标准；memory.md 记录长期事实，比如你的偏好、项目进展、已经做过的决策；resources 放模板、样例和参考资料。随后他用邮件、支出追踪、newsletter 这类例子说明，上下文准备好以后，Claude 输出会更贴近你的真实工作，而不是生成一段泛泛的答案。", authorView: "作者真正想教的是维护上下文系统，而不是复制某一套模板。模板只是起点，长期可用靠持续沉淀规则和资料。", sourceCue: "CLAUDE.md instruction files, persistent memory" }
     ],
     tools: ["Claude Cowork", "CLAUDE.md", "memory.md", "Obsidian"]
   },
@@ -238,8 +239,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "Jeff 把 Cowork 拆成几个可理解的能力：本地文件访问、持久记忆、连接器、Skills、Projects、浏览器扩展和定时任务。",
     actions: ["先理解能力边界，再决定是否迁移工作流。", "重点关注本地文件访问、持久记忆、Skills、定时任务。", "把它当成 Claude Cowork 功能地图，而不是深度技术课。"],
     chapters: [
-      { time: "00:00 - 02:19", title: "Claude Chat、Cowork、Code 的区别", context: "开头先做产品定位，帮助观众区分 Claude 的不同使用入口。", authorView: "Jeff 想先划清边界，避免观众把 Cowork 当作更复杂的聊天窗口。他希望你把 Cowork 看成电脑上的生产力系统。", sourceCue: "Claude Chat, Cowork, Code" },
-      { time: "02:19 - 08:44", title: "本地文件访问和持久记忆", context: "Cowork 能接触本地工作材料，并保存持续有效的记忆。", authorView: "Jeff 认为这两项决定 Cowork 能不能处理真实工作。本地文件访问减少复制粘贴，持久记忆减少重复解释。", sourceCue: "local file access, persistent memory" }
+      { time: "00:00 - 02:19", title: "先区分 Claude 的几个入口", context: "开头先做产品定位，帮助观众区分 Claude 的不同使用入口。", details: "Jeff 先把 Claude Chat、Claude Cowork 和 Claude Code 的使用场景分开：Chat 更像对话入口，适合临时问答；Cowork 面向电脑上的长期工作，能结合文件、记忆和工具；Code 则偏开发任务。他这样铺垫，是为了让观众别把 Cowork 当作普通聊天窗口的升级版，而是理解为一种更接近桌面工作台的产品。", authorView: "Jeff 想先划清边界，再讲能力，避免后面所有功能都被误解成聊天功能。", sourceCue: "Claude Chat, Cowork, Code" },
+      { time: "02:19 - 08:44", title: "本地文件访问和持久记忆", context: "Cowork 能接触本地工作材料，并保存持续有效的记忆。", details: "他接着讲 Cowork 的两个基础能力：访问本地文件，以及保存跨会话记忆。本地文件访问意味着你不用把文档、表格、项目材料一段段复制进聊天框；持久记忆则让 Claude 记住你长期偏好和重复背景。Jeff 会把这些能力和真实工作联系起来：如果 AI 能直接读工作材料，又不用每次重新解释，它才有机会参与持续任务。", authorView: "Jeff 认为这两项决定 Cowork 能不能处理真实工作，因为它们减少复制粘贴和重复说明。", sourceCue: "local file access, persistent memory" },
+      { time: "08:44 - 20:00", title: "工具、Skills、Projects 和定时任务", context: "后半段讲 Cowork 如何通过连接器、技能、项目和计划任务扩展工作范围。", details: "视频后半段把能力继续往外扩：连接器让 Claude 接入更多外部服务；Skills 像可复用能力包，让某类任务有固定做法；Projects 把某个长期主题的资料和规则收在一起；浏览器扩展和定时任务则让 Claude 更接近主动工作的助手。Jeff 不是逐个深挖技术细节，而是在告诉观众：Cowork 的价值来自这些能力组合起来以后形成的工作系统。", authorView: "作者希望观众先掌握能力地图，再决定哪些能力值得放进自己的工作流。", sourceCue: "Skills, Projects, Scheduled Tasks" }
     ],
     tools: ["Claude Cowork", "Claude Skills", "Cowork Projects", "Scheduled Tasks"]
   },
@@ -254,8 +256,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "Jeff 把 NotebookLM 拆成 Sources、Chat、Studio 三栏，重点评估 Studio 里的报告、幻灯片、信息图和思维导图。",
     actions: ["优先试 Reports、Slide Decks、Infographics、Mind Maps。", "把 NotebookLM 理解为 source-grounded content studio。", "视频、音频、Quiz、Flashcards 按具体场景使用即可。"],
     chapters: [
-      { time: "00:00 - 02:05", title: "NotebookLM 的核心优势", context: "它的优势不是泛泛回答，而是围绕你提供的 sources 工作。", authorView: "Jeff 希望观众先理解这个前提：NotebookLM 的输出质量取决于资料源质量，后面的报告、PPT、信息图和思维导图都建立在 source-grounded 的基础上。", sourceCue: "Core Advantage" },
-      { time: "07:51 - 13:56", title: "Tier 1 Studio 工具", context: "Reports、Slide Decks、Infographics、Mind Maps 是最值得优先使用的工具。", authorView: "Jeff 认为这些工具价值最高，因为它们能把资料直接变成可交付内容。重点不是功能多，而是优先掌握高频、高价值工具。", sourceCue: "Tier 1 Tools" }
+      { time: "00:00 - 02:05", title: "NotebookLM 的核心优势", context: "它的优势不是泛泛回答，而是围绕你提供的 sources 工作。", details: "Jeff 开头先提醒：NotebookLM 的核心不是像 ChatGPT 那样泛聊，而是围绕你上传或添加的资料源工作。你给它论文、网页、文档或笔记，它会基于这些 sources 回答、总结和生成内容。因此判断 NotebookLM 的前提，是看它如何理解和使用资料，而不是只看它回答得是否流畅。", authorView: "Jeff 希望观众先把 NotebookLM 放在 source-grounded 工具的位置上，资料质量决定输出上限。", sourceCue: "Core Advantage" },
+      { time: "02:05 - 07:51", title: "Sources、Chat、Studio 三栏", context: "视频中段解释 NotebookLM 新界面如何组织资料、对话和生成产物。", details: "他把界面拆成三块：Sources 用来管理输入资料；Chat 用来围绕资料提问、追问和查证；Studio 用来生成更成型的输出，比如报告、音频、视频、幻灯片、信息图、测验和思维导图。Jeff 的讲法不是逐个按钮介绍，而是让观众理解三栏之间的关系：先有资料，再有问答，最后把结果变成交付物。", authorView: "作者关注的是工作流闭环：资料进入 NotebookLM 后，能不能快速变成你能用的内容。", sourceCue: "Sources, Chat, Studio" },
+      { time: "07:51 - 13:56", title: "最值得优先试的 Studio 工具", context: "Reports、Slide Decks、Infographics、Mind Maps 是最值得优先使用的工具。", details: "Jeff 把 Studio 工具分层，优先推荐 Reports、Slide Decks、Infographics、Mind Maps，因为它们能把资料直接转成更完整的工作成果。报告适合长文总结，幻灯片适合汇报，信息图和思维导图适合快速理解结构。相比之下，音频、视频、Quiz、Flashcards 更依赖具体场景，不一定每个人都高频使用。", authorView: "Jeff 认为重点不是功能越多越好，而是先掌握最能节省整理时间的高价值工具。", sourceCue: "Tier 1 Tools" }
     ],
     tools: ["NotebookLM", "Reports", "Slide Decks", "Infographics", "Mind Maps"]
   },
@@ -270,8 +273,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "她按自己的实际设置讲硬件选择、安装向导、Mission Control、Discord、项目构建、GitHub、多 Agent、安全检查和记忆修复。",
     actions: ["先看 OpenClaw 是否适合本地 agent 实验。", "重点关注 Mission Control、多 Agent、GitHub 和安全检查。", "提示词可借鉴，但不要照搬到敏感项目。"],
     chapters: [
-      { time: "00:50 - 08:13", title: "硬件、下载和 Onboarding", context: "她先从环境准备讲起，降低 OpenClaw 上手门槛。", authorView: "Tina 想表达的是，本地 agent 不是只靠软件安装，硬件、初始配置和引导流程会直接影响后续体验。她把 setup 细节讲出来，是为了让观众少踩环境坑。", sourceCue: "Hardware Selection / Download & Onboarding Wizard" },
-      { time: "16:58 - 22:32", title: "Multi-Agent、安全和记忆修复", context: "后段进入更高级的 agent 协作、权限和记忆问题。", authorView: "她真正关心的是 agent 系统是否能可靠完成项目，而不是只跑 demo。多 agent 要有协作方式，安全检查要防止越权，记忆修复则影响持续工作质量。", sourceCue: "Multi-Agent Framework / Security Check / Memory Fixes" }
+      { time: "00:50 - 08:13", title: "硬件、下载和 Onboarding", context: "她先从环境准备讲起，降低 OpenClaw 上手门槛。", details: "Tina 先讲自己为什么关注硬件选择：本地 agent 要跑得顺，机器性能、系统环境和安装路径都会影响体验。接着她进入下载和 onboarding wizard，展示初次配置时要填什么、检查什么，以及怎样让 OpenClaw 知道你的本地开发环境。她不是只给一个安装命令，而是把从准备机器到进入工作台的流程走了一遍。", authorView: "Tina 想表达的是，本地 agent 不是只靠软件安装，硬件、初始配置和引导流程会直接影响后续体验。", sourceCue: "Hardware Selection / Download & Onboarding Wizard" },
+      { time: "08:13 - 16:58", title: "Mission Control、Discord、项目和 GitHub", context: "中段展示 OpenClaw 如何从控制台进入真实项目协作。", details: "她接着讲 Custom Mission Control，把它当作管理 agent 工作的主控台：你可以查看任务、组织项目、安排 agent 做什么。之后她讲 Discord setup，说明 agent 工作流不一定只在 IDE 里发生，也可以接入沟通渠道。再往后是 build projects 和 GitHub：她展示如何让 agent 面向真实项目产出代码、接触仓库，并把结果和版本管理连接起来。", authorView: "她想让观众看到 OpenClaw 不只是本地聊天工具，而是围绕项目、沟通和代码仓库组织起来的 agent 环境。", sourceCue: "Custom Mission Control / Discord Setup / Github" },
+      { time: "16:58 - 22:32", title: "Multi-Agent、安全和记忆修复", context: "后段进入更高级的 agent 协作、权限和记忆问题。", details: "最后她进入多 agent 框架，说明一个任务可以拆给多个 agent 协作，而不是让单个模型从头做到尾。随后她专门讲 security check，因为本地 agent 可能访问文件、执行命令或改代码，权限边界必须清楚。memory fixes 则用来解决 agent 持续工作时忘记背景、重复犯错或上下文不稳定的问题。", authorView: "她真正关心的是 agent 系统是否能可靠完成项目，而不是只跑 demo。", sourceCue: "Multi-Agent Framework / Security Check / Memory Fixes" }
     ],
     tools: ["OpenClaw", "Bolt", "GitHub", "Discord"]
   },
@@ -286,8 +290,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "视频先定义 Local AI Agent，再讲原则与技巧，随后用 OpenClaw 代码 demo 和 Claude Cowork no-code demo 展示两条路径。",
     actions: ["先理解 local agent 的边界。", "代码路径看 OpenClaw，低代码路径看 Claude Cowork。", "关注本地权限、文件访问和安全边界。"],
     chapters: [
-      { time: "01:18 - 09:29", title: "Local AI Agent 定义和原则", context: "她先回答 local agent 是什么，以及使用时要注意哪些原则。", authorView: "Tina 想让观众先建立正确预期：local agent 不是神奇自动化按钮，而是在本机环境里使用工具、文件和上下文完成任务的系统。", sourceCue: "Definition Of Local AI Agent / Principles And Tips" },
-      { time: "14:20 - 24:22", title: "OpenClaw 与 Claude Cowork demo", context: "她分别展示代码方式和 no-code 方式。", authorView: "她用两个 demo 对比不同人群的入口：愿意写代码的人可以用 OpenClaw 掌控更多细节；想快速开始的人可以用 Claude Cowork。", sourceCue: "Demo: Openclaw / Demo: Claude Cowork" }
+      { time: "01:18 - 09:29", title: "Local AI Agent 定义和原则", context: "她先回答 local agent 是什么，以及使用时要注意哪些原则。", details: "Tina 先定义 local AI agent：它不是只在网页里回答问题，而是在你的本机环境里，能接触文件、工具和上下文，并围绕目标采取一系列动作。她强调使用原则：要给清楚目标，要限制权限，要知道 agent 能访问什么，也要理解本地运行并不等于自动更安全。她还提醒观众不要把 agent 当成完全自治的员工，早期使用仍然需要人来检查和纠偏。", authorView: "Tina 想让观众先建立正确预期：local agent 是工具化工作流，不是神奇自动化按钮。", sourceCue: "Definition Of Local AI Agent / Principles And Tips" },
+      { time: "09:29 - 14:20", title: "用小测验检查理解", context: "中段穿插 quiz，帮助观众确认是否理解 local agent 的边界。", details: "她在讲完原则后穿插 quiz，不是为了制造互动感，而是让观众停下来判断：哪些任务适合 local agent，哪些场景需要谨慎，哪些权限不能随便放开。这部分把前面的概念落到具体选择题里，例如本地文件访问、工具调用、自动执行和安全边界之间的区别。", authorView: "她希望观众不是听完概念就开始乱用，而是先形成判断标准。", sourceCue: "Quiz 1" },
+      { time: "14:20 - 24:22", title: "OpenClaw 与 Claude Cowork demo", context: "她分别展示代码方式和 no-code 方式。", details: "demo 部分分两条路：OpenClaw 是更偏代码和工程控制的路径，适合愿意配置框架、看代码、接入项目的人；Claude Cowork 是 no-code 路径，更适合先把本地文件、记忆和工作流串起来。她展示这两种方式，是为了说明 local agent 不是单一产品形态，而是一类可以从低门槛到高控制度逐步深入的工作方式。", authorView: "她用两个 demo 对比不同人群的入口：代码路径掌控更多细节，no-code 路径更容易开始。", sourceCue: "Demo: Openclaw / Demo: Claude Cowork" }
     ],
     tools: ["OpenClaw", "Claude Cowork", "Local AI Agents"]
   },
@@ -302,8 +307,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "Tina 按部署方式拆解：本地运行、浏览器/托管 playground、托管推理 API、VPS、托管云、端侧/边缘。",
     actions: ["学习阶段优先本地或 playground。", "产品验证可用托管推理 API。", "需要控制成本和性能时再评估 VPS、云和边缘。"],
     chapters: [
-      { time: "01:40 - 10:44", title: "本地、Playground 和推理 API", context: "前半段讲最容易上手的三类方式。", authorView: "Tina 想让观众看到，运行开源模型不是只有自己配 GPU 一条路。不同方式对应不同门槛、成本和控制权。", sourceCue: "Run Open Source Models Locally / Managed Inference API" },
-      { time: "11:57 - 16:01", title: "VPS、托管云和端侧", context: "后半段讲更偏部署和产品化的选择。", authorView: "她想强调，选择部署方式要看目标：实验、产品原型、稳定服务、隐私或延迟，每种目标对应不同基础设施。", sourceCue: "VPS / Managed Cloud / On-device/Edge" }
+      { time: "01:40 - 07:47", title: "本地运行开源模型", context: "前半段先讲自己在电脑上跑模型的方式。", details: "Tina 先从本地运行讲起，因为这是理解开源模型最直接的入口。她会说明本地跑模型的好处：数据不一定要发到云端、调试自由度高、适合学习模型大小和硬件限制；同时也讲到现实门槛，比如显存、安装、速度和模型选择。她希望观众知道，本地运行适合学习和实验，但不一定适合所有生产场景。", authorView: "Tina 想让观众看到，本地运行给你控制权，但也把硬件和维护成本交给了你。", sourceCue: "Run Open Source Models Locally" },
+      { time: "07:47 - 11:57", title: "Playground 和托管推理 API", context: "中段讲更容易上手、也更适合快速验证的方式。", details: "接着她讲浏览器或托管 playground：你不需要自己配置环境，就能试模型效果。再往后是 managed inference API，适合把模型能力接到应用里做产品验证。她会把这两类方式和本地运行对比：你放弃了一部分底层控制，但换来更快启动、更少维护和更稳定的服务体验。", authorView: "她认为学习阶段可以用 playground，做原型时 API 往往比自建推理更实际。", sourceCue: "Browser/Hosted Playgrounds / Managed Inference API" },
+      { time: "11:57 - 16:01", title: "VPS、托管云和端侧", context: "后半段讲更偏部署和产品化的选择。", details: "最后她讲 VPS、managed cloud 和 on-device/edge。VPS 适合想控制环境但不想买硬件的人；托管云适合需要稳定扩缩容和工程支持的场景；端侧或边缘设备则适合关注隐私、延迟或离线能力的产品。Tina 不是说哪一种最好，而是把它们放在成本、控制权、运维难度、隐私和性能之间做权衡。", authorView: "她想强调，部署方式要跟目标匹配：实验、原型、稳定服务和端侧产品不是同一个答案。", sourceCue: "VPS / Managed Cloud / On-device/Edge" }
     ],
     tools: ["Open Source Models", "Managed Inference API", "VPS", "Edge"]
   },
@@ -318,8 +324,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "内容覆盖基础聊天、thinking models、搜索、deep research、文件上传、Python、Artifacts、Cursor、语音、NotebookLM、图像和视频、多模态、记忆与 Custom GPTs。",
     actions: ["把它当成 LLM 使用地图。", "重点看工具使用、文件上下文、代码、语音和多模态章节。", "用它校准自己对 LLM 产品生态的理解。"],
     chapters: [
-      { time: "00:00 - 00:31:00", title: "LLM 交互和模型选择", context: "开头解释 ChatGPT 交互、基础例子、模型和价格层级、thinking models。", authorView: "Karpathy 想让普通用户理解，LLM 不是一个单一产品，而是一组能力和成本不同的模型。会选模型，比盲目使用更重要。", sourceCue: "Be aware of the model you're using" },
-      { time: "00:31:00 - 01:14:02", title: "工具使用和上下文", context: "中段讲搜索、deep research、文件上传、Python、Claude Artifacts。", authorView: "他真正想展示的是 LLM 如何从聊天扩展成工作台：搜索补外部信息，文件提供上下文，Python 负责计算，Artifacts 负责生成可视化结果。", sourceCue: "Tool use / File uploads / Claude Artifacts" }
+      { time: "00:00 - 00:31:00", title: "基础聊天、模型选择和 thinking models", context: "开头解释 ChatGPT 交互、基础例子、模型和价格层级、thinking models。", details: "Karpathy 先从最普通的聊天入口讲起，用简单例子展示 LLM 可以解释概念、改写文字、辅助思考。然后他提醒观众注意自己正在用哪个模型：不同模型能力、速度、价格和推理深度不同。thinking models 这部分强调，有些模型会花更多时间推理，适合复杂问题；但并不是所有任务都需要最贵或最慢的模型。", authorView: "Karpathy 想让普通用户理解，LLM 不是一个单一产品，而是一组能力和成本不同的模型。", sourceCue: "Be aware of the model you're using" },
+      { time: "00:31:00 - 01:14:02", title: "搜索、deep research、文件和 Python", context: "中段讲搜索、deep research、文件上传、Python、Claude Artifacts。", details: "他接着展示 LLM 连接工具后的变化：互联网搜索让模型补充新信息；deep research 适合更系统地查资料；文件上传让模型基于你的材料工作；Python 解释器负责计算、画图和处理数据；Claude Artifacts 可以把结果变成可交互或可展示的东西。这一段的重点是，LLM 不只是说话，它开始像一个带工具的工作台。", authorView: "他真正想展示的是 LLM 如何从聊天扩展成工作台：外部信息、私有上下文、计算和生成物互相配合。", sourceCue: "Tool use / File uploads / Claude Artifacts" },
+      { time: "01:14:02 - 结束", title: "Cursor、语音、多模态、记忆和自定义助手", context: "后半段覆盖代码、语音、NotebookLM、图像视频、多模态和 Custom GPTs。", details: "后面 Karpathy 把使用场景继续展开：Cursor 代表 LLM 深入代码编辑器；语音模式让交互更接近对话；NotebookLM 更适合围绕资料工作；图像和视频能力说明模型正在进入多模态输入输出；记忆和 Custom GPTs 则让助手能保存偏好、固定任务方式和复用角色。整期像一次个人工具箱盘点，展示他会在不同任务里选不同 LLM 产品形态。", authorView: "他不是推荐唯一工具，而是在展示一种成熟用户的选择方式：按任务选择交互形态和上下文能力。", sourceCue: "Cursor / NotebookLM / Memory / Custom GPTs" }
     ],
     tools: ["ChatGPT", "Claude", "Gemini", "NotebookLM", "Cursor"]
   },
@@ -334,8 +341,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "Karpathy 系统解释 LLM 如何从互联网数据预训练、如何 tokenization、如何推理、如何 post-training，以及 hallucination、tool use、RL、DeepSeek-R1 等概念。",
     actions: ["作为 LLM 技术底层入门主课。", "重点理解 pretraining 到 post-training 的过渡。", "把 hallucination、tool use、working memory 当作产品能力边界看。"],
     chapters: [
-      { time: "00:01:00 - 00:59:23", title: "预训练、tokenization 和推理", context: "前半段讲模型如何从互联网数据学习，以及 token 和 neural network 的基本运作。", authorView: "Karpathy 想把 LLM 去神秘化：它不是魔法，而是大规模数据、token 表示、神经网络和推理过程的组合。理解这些，才能理解模型为什么强也为什么会犯错。", sourceCue: "pretraining data / tokenization / inference" },
-      { time: "00:59:23 - 03:21:46", title: "后训练、工具和未来", context: "后半段讲 post-training、hallucinations、tool use、RLHF、DeepSeek-R1 和未来方向。", authorView: "他希望观众看到，现代 LLM 的能力不只来自预训练，还来自后训练、强化学习、工具使用和产品包装。未来竞争会围绕这些层一起展开。", sourceCue: "post-training / RLHF / DeepSeek-R1" }
+      { time: "00:01:00 - 00:59:23", title: "预训练、tokenization 和推理", context: "前半段讲模型如何从互联网数据学习，以及 token 和 neural network 的基本运作。", details: "Karpathy 先把 LLM 的起点讲清楚：模型在大量互联网文本上做预训练，学习根据前文预测下一个 token。tokenization 解释了文字如何被切成模型能处理的单位；神经网络则学习这些 token 之间的统计结构。推理时，模型不是直接拿出一个固定答案，而是一步步生成 token，所以输出会受提示词、采样和上下文影响。", authorView: "Karpathy 想把 LLM 去神秘化：它不是魔法，而是数据、token、神经网络和生成过程的组合。", sourceCue: "pretraining data / tokenization / inference" },
+      { time: "00:59:23 - 01:52:00", title: "后训练、助手形态和幻觉", context: "中段讲模型如何从预测文本变成能对话的助手。", details: "他接着解释 post-training：预训练模型只是学会续写文本，还需要通过指令微调、人类偏好和强化学习变成更有用的助手。这里也会讲 hallucination：模型生成的是看起来合理的 token，不等于它真的知道事实。Karpathy 会把幻觉和模型机制联系起来，说明为什么引用、搜索、工具和资料 grounding 对真实使用很重要。", authorView: "他希望观众理解，ChatGPT 式助手不是预训练自然长出来的，而是后训练和产品设计塑造出来的。", sourceCue: "post-training / hallucinations" },
+      { time: "01:52:00 - 03:21:46", title: "工具使用、RLHF、DeepSeek-R1 和未来", context: "后半段讲 tool use、RLHF、强化学习案例和未来方向。", details: "后半段继续讲现代 LLM 如何补短板：工具使用让模型调用搜索、代码执行和外部系统；RLHF 让输出更符合人类偏好；DeepSeek-R1 这类案例说明强化学习可以显著提升推理表现。他还会讨论工作记忆、上下文长度、多模态和 agent 方向，让观众看到 LLM 竞争已经不只是模型本体，而是训练方法、工具系统和产品形态的组合。", authorView: "他希望观众看到，现代 LLM 的能力来自多层系统：预训练只是地基，后训练、工具和推理机制决定可用性。", sourceCue: "tool use / RLHF / DeepSeek-R1" }
     ],
     tools: ["LLM", "GPT-2", "Llama", "DeepSeek-R1", "RLHF"]
   },
@@ -350,8 +358,9 @@ window.AI_VIDEO_SUMMARIES = [
     summary: "视频从 OpenAI GPT-2 checkpoint 开始，逐步实现 GPT-2 nn.Module、forward pass、采样、训练 loop、data loader、参数共享、初始化和 GPU 加速。",
     actions: ["适合想真正理解 Transformer 训练工程的人。", "配合 build-nanogpt 和 nanoGPT repo 学习。", "重点看实现到训练加速的完整路径。"],
     chapters: [
-      { time: "00:03:39 - 01:22:18", title: "实现 GPT-2 模型和训练基础", context: "前半段从 checkpoint、nn.Module、forward、sampling 到基本训练 loop。", authorView: "Karpathy 想让观众亲手穿过模型实现细节，而不是只看论文图。通过复现 GPT-2，你能把 token、logits、loss、sampling 和训练循环连成一个整体。", sourceCue: "implementing the GPT-2 nn.Module" },
-      { time: "01:22:18 - 结束", title: "训练加速和完整运行", context: "后半段进入 GPU、mixed precision、Tensor Cores、训练超参数和完整 run。", authorView: "他想强调，模型能跑起来只是第一步；真正的训练工程还包括速度、数值稳定性、硬件利用和可复现的超参数设置。", sourceCue: "Let's make it fast / Tensor Cores" }
+      { time: "00:03:39 - 00:45:00", title: "从 checkpoint 到 GPT-2 模型结构", context: "开头从 OpenAI GPT-2 checkpoint 和 nn.Module 实现讲起。", details: "Karpathy 先加载 OpenAI GPT-2 124M 的 checkpoint，让观众看到要复现的目标长什么样。然后他开始实现 GPT-2 的 PyTorch nn.Module，把 token embedding、position embedding、Transformer block、attention、MLP 和输出 head 串起来。这一段不是讲概念图，而是把论文里的结构变成能运行的代码。", authorView: "他想让观众从真实代码理解 Transformer，而不是停留在架构示意图。", sourceCue: "implementing the GPT-2 nn.Module" },
+      { time: "00:45:00 - 01:22:18", title: "forward、采样和训练循环", context: "中段把模型跑起来，并开始训练。", details: "模型结构搭好后，他实现 forward pass，解释输入 token 如何变成 logits 和 loss。随后加入 sampling，让模型能根据当前参数生成文本；再写训练 loop、data loader 和 loss 记录，让模型开始从数据里学习。这里的价值是把生成、损失函数、反向传播和数据批次连接成一条完整链路。", authorView: "Karpathy 想让你看到，语言模型训练不是一堆孤立概念，而是一个可以逐步搭起来的工程循环。", sourceCue: "forward pass / sampling / training loop" },
+      { time: "01:22:18 - 结束", title: "训练加速和完整运行", context: "后半段进入 GPU、mixed precision、Tensor Cores、训练超参数和完整 run。", details: "后半段他开始把训练变快：把数据和模型放到 GPU，使用 mixed precision，利用 Tensor Cores，调整 batch、学习率、初始化和参数共享等细节。他还会讨论训练超参数、验证 loss、模型保存和完整 run。重点不是炫技，而是说明真正训练一个模型时，速度、数值稳定性、硬件利用率和可复现设置同样重要。", authorView: "他想强调，模型能跑起来只是第一步；训练工程决定你能不能高效、稳定地复现实验。", sourceCue: "Let's make it fast / Tensor Cores" }
     ],
     tools: ["GPT-2", "nanoGPT", "llm.c", "PyTorch", "Tensor Cores"]
   }

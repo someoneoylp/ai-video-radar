@@ -64,6 +64,8 @@
               </div>
               <div class="section-card__body">
                 <div class="section-card__cell section-card__author">
+                  <h4>作者讲了什么</h4>
+                  <p class="chapter-detail brief-copy">${escapeHtml(chapter.details || chapter.context)}</p>
                   <h4>作者观点</h4>
                   <div class="author-panel">
                     <p class="author-body brief-copy">${escapeHtml(chapter.authorView)}</p>
