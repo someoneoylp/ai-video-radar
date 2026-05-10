@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI 技术雷达 Demo｜最近 3 天</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f8fa;
+        --text: #172033;
+        --muted: #637083;
+        --line: #dfe4ea;
+        --panel: #ffffff;
+        --accent: #0b6bcb;
+        --accent-soft: #e9f2ff;
+        --tag: #eef1f5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 48px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        align-items: end;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 20px;
+        margin-bottom: 18px;
+      }
+
+      h1, h2, h3, p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(28px, 4vw, 42px);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.7fr 0.9fr;
+        gap: 18px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
+      .brief {
+        display: grid;
+        gap: 12px;
+      }
+
+      .item {
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+
+      .item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .item-head {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: var(--tag);
+        color: #38445a;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .tag.strong {
+        background: var(--accent-soft);
+        color: #064f98;
+      }
+
+      .one-line {
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .why {
+        color: #334155;
+      }
+
+      .boundary {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 6px;
+      }
+
+      .source-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .source-actions a,
+      .source-actions summary,
+      .detail-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 30px;
+        padding: 4px 10px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .detail-link {
+        width: fit-content;
+        margin-top: 10px;
+      }
+
+      details.translation {
+        margin-top: 10px;
+      }
+
+      details.translation summary {
+        width: fit-content;
+        list-style: none;
+      }
+
+      details.translation summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .translation-body {
+        margin-top: 10px;
+        border-left: 3px solid var(--accent);
+        background: #fbfcfe;
+        padding: 12px 14px;
+      }
+
+      .translation-body p + p {
+        margin-top: 8px;
+      }
+
+      .side-stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .source-list {
+        font-size: 14px;
+      }
+
+      @media (max-width: 800px) {
+        header,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="meta">AI 技术雷达 Demo · 最近 3 天 · 生成时间 2026-05-10 21:40 CST</p>
+          <h1>最近 3 天 AI 技术动态</h1>
+        </div>
+        <p class="meta">目标读者：技术背景，需要快速判断什么值得跟进</p>
+      </header>
+
+      <section class="grid">
+        <article class="panel brief">
+          <h2>最值得看的更新</h2>
+
+          <section class="item">
+            <div class="item-head">
+              <span class="tag strong">OpenAI</span>
+              <span class="tag">语音 Agent</span>
+              <span class="meta">2026-05-07</span>
+            </div>
+            <h3>Realtime Voice 新模型：GPT-Realtime-2、Translate、Whisper</h3>
+            <p class="one-line">一句话：实时语音从“听懂并回答”往“边对话边推理、调用工具、执行任务”推进。</p>
+            <p class="why">关键变化：OpenAI 发布 3 个 API 音频模型，覆盖实时语音推理、实时翻译、流式转写。GPT-Realtime-2 支持更长上下文、并行工具调用、更好的中断恢复和领域术语保持，面向客服、房产、旅行、医疗等生产语音 Agent 场景。</p>
+            <p class="why">技术人为什么要关心：语音 Agent 的难点不只是延迟和音色，而是多轮状态、工具调用透明度、错误恢复和合规边界。这个方向会影响客服系统、移动端助手、车载交互和多语言会议产品。</p>
+            <p class="boundary">信息边界：基于 OpenAI 官方发布页；性能数字来自官方描述，未独立复测。</p>
+            <a class="detail-link" href="./details/openai-realtime-voice.html">查看详细内容</a>
+          </section>
+
+          <section class="item">
+            <div class="item-head">
+              <span class="tag strong">Anthropic</span>
+              <span class="tag">企业 Agent</span>
+              <span class="meta">2026-05-05 / 05-06</span>
+            </div>
+            <h3>Claude 面向金融服务推出预构建 Agent，并提高使用额度</h3>
+            <p class="one-line">一句话：Anthropic 正在把 Claude 从通用助手包装成行业任务单元。</p>
+            <p class="why">关键变化：Anthropic 新闻页显示 5 月 5 日发布金融服务 Agents，5 月 6 日发布更高使用限额与 SpaceX compute deal。金融 Agent 的产品叙事强调 skills、connectors、subagents，把投行、审计、估值、模型构建等高重复知识工作做成可部署组件。</p>
+            <p class="why">技术人为什么要关心：这说明 Agent 商业化的早期抓手不是“完全自主通用智能体”，而是把行业流程拆成可审计、可连接数据源、可被人工复核的半结构化任务。</p>
+            <p class="boundary">信息边界：官方 newsroom 可确认标题和日期；部分任务细节来自媒体二次报道，应在正式日报中继续回源校验。</p>
+            <a class="detail-link" href="./details/anthropic-financial-agents.html">查看详细内容</a>
+          </section>
+
+          <section class="item">
+            <div class="item-head">
+              <span class="tag strong">Hugging Face</span>
+              <span class="tag">Agent 论文</span>
+              <span class="meta">2026-05-08</span>
+            </div>
+            <h3>Daily Papers：Agentic Search、Skill-Augmented Agents、SkillOS</h3>
+            <p class="one-line">一句话：Agent 研究正在从“模型自己想”转向“会检索、会选技能、会沉淀技能”。</p>
+            <p class="why">关键变化：5 月 8 日 Hugging Face Daily Papers 榜单里，多篇高位论文集中在 Agentic Search、Skill-Augmented RL、Skill Curation。它们共同关心一个问题：Agent 如何在多步任务里选择信息、调用能力、复用经验。</p>
+            <p class="why">技术人为什么要关心：这和工程里的 Agent memory、tool routing、workflow library 是同一条线。未来 Agent 平台竞争会落在“能力库如何组织”和“什么时候调用什么技能”，而不只是底座模型。</p>
+            <p class="boundary">信息边界：这里基于 Hugging Face 榜单标题和可见元数据生成，未逐篇阅读全文。</p>
+            <a class="detail-link" href="./details/huggingface-agent-papers.html">查看详细内容</a>
+          </section>
+
+          <section class="item">
+            <div class="item-head">
+              <span class="tag strong">Google DeepMind</span>
+              <span class="tag">算法发现</span>
+              <span class="meta">近 3 天被重新传播，官方原文为 2025-05-14</span>
+            </div>
+            <h3>AlphaEvolve：用 Gemini + 自动评估器演化算法</h3>
+            <p class="one-line">一句话：这是“AI 写代码”的另一个分支：不是写业务功能，而是搜索更优算法。</p>
+            <p class="why">关键变化：AlphaEvolve 结合 LLM 生成候选程序、自动评估器打分、进化式搜索，已被用于数据中心调度、芯片设计、AI 训练和矩阵乘法算法改进。官方称数据中心调度优化持续回收约 0.7% 全球计算资源。</p>
+            <p class="why">技术人为什么要关心：当目标函数可量化、验证器可靠时，LLM Agent 可以从“辅助编码”进入“自动优化实现空间”。这对编译器、内核优化、调度、科学计算更有意义。</p>
+            <p class="boundary">信息边界：官方原文不是最近 3 天发布；纳入 demo 是因为近几天被二次传播，正式日报应标注为“补读/再传播”。</p>
+            <a class="detail-link" href="./details/alphaevolve.html">查看详细内容</a>
+          </section>
+
+          <section class="item">
+            <div class="item-head">
+              <span class="tag strong">GitHub</span>
+              <span class="tag">开源信号</span>
+              <span class="meta">2026-05-09 至 05-10</span>
+            </div>
+            <h3>高星 AI 工具链仍在密集更新：Dify、Open WebUI、LangChain、n8n、AutoGPT</h3>
+            <p class="one-line">一句话：Agent 工程化生态还在快速迭代，但 push 不等于发布。</p>
+            <p class="why">关键变化：GitHub API 显示多个高星 AI 项目过去 24-48 小时有代码更新，包括 n8n、AutoGPT、Dify、Open WebUI、LangChain 等。它们覆盖 workflow automation、agent platform、本地 AI UI 和 agent engineering。</p>
+            <p class="why">技术人为什么要关心：这些项目更适合作为“生态活跃度信号”，不要直接当新闻。自动化日报应优先抓 release、tag、重要 README 变化或官方 changelog。</p>
+            <p class="boundary">信息边界：本条基于 GitHub pushed_at，噪声较高，只作为趋势观察。</p>
+            <a class="detail-link" href="./details/github-ai-toolchain.html">查看详细内容</a>
+          </section>
+        </article>
+
+        <aside class="side-stack">
+          <section class="panel">
+            <h2>今日判断</h2>
+            <ul>
+              <li>语音 Agent 正在从低延迟对话升级到“多轮推理 + 工具调用 + 业务流程执行”。</li>
+              <li>Agent 的研究热点正在靠近工程问题：检索、技能选择、记忆和可复用能力库。</li>
+              <li>企业落地方向仍偏垂直行业任务，而不是开放式通用自主 Agent。</li>
+            </ul>
+          </section>
+
+          <section class="panel">
+            <h2>建议行动</h2>
+            <ul>
+              <li>如果你做客服、会议、车载或移动助手，优先看 OpenAI realtime voice API 的工具调用与上下文设计。</li>
+              <li>如果你做 Agent 平台，重点跟 Hugging Face 5 月 8 日 Skill / Agentic Search 论文线。</li>
+              <li>如果你关注 AI infra，AlphaEvolve 值得作为“自动优化器 + 验证器”的架构案例补读。</li>
+            </ul>
+          </section>
+
+          <section class="panel source-list">
+            <h2>来源</h2>
+            <ul>
+              <li><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI：Advancing voice intelligence with new models in the API</a></li>
+              <li><a href="https://www.anthropic.com/news">Anthropic Newsroom</a></li>
+              <li><a href="https://api-inference.huggingface.co/papers/date/2026-05-08">Hugging Face Daily Papers · May 8</a></li>
+              <li><a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">Google DeepMind：AlphaEvolve</a></li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
