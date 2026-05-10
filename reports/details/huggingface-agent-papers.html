@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hugging Face Agent 论文趋势｜中文详译</title>
+    <style>
+      body { margin: 0; background: #f7f8fa; color: #172033; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.68; }
+      main { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+      a { color: #0b6bcb; text-decoration: none; }
+      .back { display: inline-flex; margin-bottom: 24px; font-weight: 700; }
+      article { background: #fff; border: 1px solid #dfe4ea; border-radius: 8px; overflow: hidden; }
+      .media { min-height: 220px; display: grid; place-items: center; background: #ffcc4d; color: #222; padding: 28px; }
+      .media strong { font-size: clamp(30px, 6vw, 54px); letter-spacing: 0; }
+      .content { padding: 26px; }
+      .meta { color: #637083; font-size: 13px; }
+      h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.14; margin: 8px 0 12px; letter-spacing: 0; }
+      h2 { margin: 30px 0 8px; font-size: 22px; }
+      p { margin: 10px 0; }
+      .notice { background: #fff7df; border: 1px solid #ecdca9; border-radius: 8px; padding: 12px 14px; color: #5b4b12; }
+      .paper { border-left: 3px solid #0b6bcb; padding-left: 14px; margin-top: 18px; }
+      .source { margin-top: 28px; padding-top: 18px; border-top: 1px solid #dfe4ea; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="../2026-05-10-demo-3days.html">返回简报</a>
+      <article>
+        <div class="media"><strong>Daily Papers</strong></div>
+        <div class="content">
+          <p class="meta">Hugging Face · 2026-05-08 · 中文详译页面</p>
+          <h1>Agent 论文趋势：检索、技能增强和自进化能力库</h1>
+          <p class="notice">版权说明：本页基于 Hugging Face Daily Papers 的可见标题和元数据生成中文详译摘要，不逐字翻译论文全文。</p>
+
+          <h2>页面结构</h2>
+          <p>Hugging Face Daily Papers 页面通常按日期列出当天受到关注的论文。5 月 8 日的高信号内容集中在 Agent 系统：如何搜索、如何选择技能、如何积累技能，以及如何让 Agent 在长期任务中复用能力。</p>
+
+          <section class="paper">
+            <h2>Agentic Search</h2>
+            <p>相关论文标题指向一个核心问题：传统语义相似度检索并不总是适合 Agent。Agent 在执行任务时，可能需要直接与语料库交互、主动提出中间查询、逐步调整检索方向，而不是一次性拿 top-k 文档。</p>
+            <p>技术含义是，RAG 在 Agent 场景里会变得更像一个过程控制问题：什么时候检索、检索什么、如何验证资料是否足够，都会影响最终任务质量。</p>
+          </section>
+
+          <section class="paper">
+            <h2>Skill-Augmented Agents</h2>
+            <p>Skill-Augmented Agents 关注的是让 Agent 在强化学习或任务执行中拥有可复用技能。相比每次都让模型从零规划，技能库可以让系统把常见动作、工具调用模式和任务策略沉淀下来。</p>
+            <p>这和工程里的 workflow template、tool recipe、agent skill package 很接近。真正有价值的 Agent 平台，可能不是只提供一个强模型，而是提供一个能持续积累和选择技能的运行时。</p>
+          </section>
+
+          <section class="paper">
+            <h2>SkillOS / Skill Curation</h2>
+            <p>SkillOS 这一类标题强调技能整理和自进化。问题不只是“能不能学到技能”，还包括技能太多以后如何去重、分类、选择、更新，以及如何避免错误技能污染后续任务。</p>
+            <p>这对技术平台很重要：Agent 的长期记忆和技能库如果没有治理机制，会很快变成噪声仓库。未来 Agent infra 需要像管理代码库一样管理技能资产。</p>
+          </section>
+
+          <h2>技术人该看什么</h2>
+          <p>如果你在做 Agent/RAG 平台，建议把这类论文当成架构信号：检索模块、技能模块、记忆模块和执行模块会越来越分离。好的系统会减少一次性 prompt 的负担，把可复用能力沉淀为结构化资产。</p>
+
+          <p class="source">原文入口：<a href="https://api-inference.huggingface.co/papers/date/2026-05-08">Hugging Face Daily Papers · May 8</a></p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

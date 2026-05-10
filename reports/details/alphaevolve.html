@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlphaEvolve｜中文详译</title>
+    <style>
+      body { margin: 0; background: #f7f8fa; color: #172033; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.68; }
+      main { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+      a { color: #0b6bcb; text-decoration: none; }
+      .back { display: inline-flex; margin-bottom: 24px; font-weight: 700; }
+      article { background: #fff; border: 1px solid #dfe4ea; border-radius: 8px; overflow: hidden; }
+      .media { min-height: 220px; display: grid; place-items: center; background: linear-gradient(135deg, #0f766e, #2dd4bf); color: #fff; padding: 28px; }
+      .media strong { font-size: clamp(30px, 6vw, 54px); letter-spacing: 0; }
+      .content { padding: 26px; }
+      .meta { color: #637083; font-size: 13px; }
+      h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.14; margin: 8px 0 12px; letter-spacing: 0; }
+      h2 { margin: 30px 0 8px; font-size: 22px; }
+      p { margin: 10px 0; }
+      .notice { background: #fff7df; border: 1px solid #ecdca9; border-radius: 8px; padding: 12px 14px; color: #5b4b12; }
+      .source { margin-top: 28px; padding-top: 18px; border-top: 1px solid #dfe4ea; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="back" href="../2026-05-10-demo-3days.html">返回简报</a>
+      <article>
+        <div class="media"><strong>AlphaEvolve</strong></div>
+        <div class="content">
+          <p class="meta">Google DeepMind · 官方原文较早，近几天被重新传播 · 中文详译页面</p>
+          <h1>AlphaEvolve：由 Gemini 驱动、用于设计高级算法的编码 Agent</h1>
+          <p class="notice">版权说明：这是基于官方文章的中文详译与结构化转述，不是逐字全文翻译。纳入本 demo 是因为近几天被重新传播，正式日报应标注为补读。</p>
+
+          <h2>核心思路</h2>
+          <p>AlphaEvolve 是一个用于算法发现和优化的编码 Agent。它把 Gemini 的代码生成能力与自动评估器结合起来：模型提出候选程序，评估器判断正确性和质量，系统再通过进化式搜索持续改进更有希望的方案。</p>
+          <p>这和普通 AI 编程助手不同。普通助手多半根据自然语言需求写代码；AlphaEvolve 更像一个可自动搜索实现空间的优化系统。只要任务有明确目标函数和可靠验证器，它就可以不断生成、评估和筛选候选算法。</p>
+
+          <h2>应用方向</h2>
+          <p>官方文章提到，AlphaEvolve 已经被用于 Google 内部多个场景，包括数据中心调度、芯片设计、AI 训练流程，以及矩阵乘法等计算机科学问题。它的优势在于可以处理那些人类很难手工穷举的算法变体。</p>
+          <p>文章还强调，它不只适用于一个特定领域。只要问题能被程序表示、能被自动评估，它就可能参与优化。这让 AlphaEvolve 更接近“通用算法搜索器”，而不是单一用途模型。</p>
+
+          <h2>为什么重要</h2>
+          <p>对技术人来说，AlphaEvolve 的意义在于展示了 LLM Agent 的另一条路线：不是聊天，不是总结，不是简单代码补全，而是在验证器约束下进行程序空间搜索。这对编译器、数值计算、系统调度、模型训练和科学计算都很有启发。</p>
+          <p>它也提醒我们，Agent 落地最稳的场景往往不是开放式任务，而是“生成候选方案 + 自动验证 + 迭代优化”的闭环。</p>
+
+          <p class="source">原文：<a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms</a></p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

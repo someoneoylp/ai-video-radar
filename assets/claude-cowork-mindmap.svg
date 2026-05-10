@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Cowork mind map</title>
+  <desc id="desc">A horizontal mind map explaining Claude Cowork from core problem to mechanisms and AI workspace trend.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title-box { fill: #557dcc; }
+      .title { fill: #ffffff; font: 700 30px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .branch { fill: #647282; font: 500 25px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .child { fill: #647282; font: 500 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .label { fill: #1f2933; font: 700 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .line { stroke: #557dcc; stroke-width: 4; fill: none; stroke-linecap: square; }
+      .dot { fill: #1f2933; }
+      .purple { fill: #8e63bf; }
+      .watermark { fill: #d6dce5; opacity: 0.38; font: 500 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="560"/>
+  <text class="watermark" x="280" y="58" transform="rotate(-14 280 58)">AI Video Radar</text>
+  <text class="watermark" x="920" y="52" transform="rotate(-14 920 52)">AI Video Radar</text>
+  <text class="watermark" x="-35" y="272" transform="rotate(-14 -35 272)">AI Video Radar</text>
+  <text class="watermark" x="1240" y="260" transform="rotate(-14 1240 260)">AI Video Radar</text>
+
+  <rect class="title-box" x="20" y="218" width="625" height="88" rx="8"/>
+  <text class="title" x="56" y="273">Claude Cowork：把聊天框变成 AI 工作空间</text>
+  <circle class="purple" cx="520" cy="306" r="8"/>
+
+  <path class="line" d="M645 262 H748"/>
+  <path class="line" d="M748 112 Q748 96 764 96 H804"/>
+  <path class="line" d="M748 112 V448"/>
+  <path class="line" d="M748 448 Q748 464 764 464 H804"/>
+  <path class="line" d="M748 262 H804"/>
+
+  <circle class="dot" cx="834" cy="106" r="5"/>
+  <text class="branch" x="860" y="115">单次聊天缺少稳定记忆</text>
+  <path class="line" d="M1138 106 H1198"/>
+  <circle class="dot" cx="1232" cy="106" r="5"/>
+  <text class="child" x="1260" y="115">memory.md 保存长期事实</text>
+
+  <circle class="dot" cx="834" cy="202" r="5"/>
+  <text class="branch" x="860" y="211">背景和偏好需要反复说明</text>
+  <path class="line" d="M1162 202 H1222"/>
+  <circle class="dot" cx="1256" cy="202" r="5"/>
+  <text class="child" x="1284" y="211">CLAUDE.md 固化工作规则</text>
+
+  <circle class="dot" cx="834" cy="298" r="5"/>
+  <text class="branch" x="860" y="307">不同任务混用同一套上下文</text>
+  <path class="line" d="M1190 298 H1250"/>
+  <circle class="dot" cx="1284" cy="298" r="5"/>
+  <text class="child" x="1312" y="307">Workstations 区分任务场景</text>
+
+  <circle class="dot" cx="834" cy="394" r="5"/>
+  <text class="branch" x="860" y="403">从 prompt 技巧升级为上下文工程</text>
+  <path class="line" d="M1248 394 H1308"/>
+  <circle class="dot" cx="1342" cy="394" r="5"/>
+  <text class="child" x="1370" y="403">规则、记忆、资料文件化</text>
+
+  <circle class="dot" cx="834" cy="484" r="5"/>
+  <text class="branch" x="860" y="493">AI 产品从 chatbot 走向 workspace</text>
+  <path class="line" d="M1256 484 H1316"/>
+  <circle class="dot" cx="1350" cy="484" r="5"/>
+  <text class="child" x="1378" y="493">模型 + 文件 + 工具 + 路由</text>
+</svg>
